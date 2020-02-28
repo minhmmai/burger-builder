@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const authStart = (state, action) => {
-    return updateObject(state, { error: null, loading: false });
+    return updateObject(state, { error: null, loading: true });
 };
 
 const authSuccess = (state, action) => {
