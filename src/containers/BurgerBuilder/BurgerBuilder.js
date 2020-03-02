@@ -63,7 +63,7 @@ class BurgerBuilder extends Component {
                     <Burger ingredients={this.props.ingredients} />
                     <BuildControls
                         ingredientAdded={this.props.onIngredientAdded}
-                        ingredientRemoved={this.removeIngredientHandler}
+                        ingredientRemoved={this.props.onIngredientRemoved}
                         disabled={disabledInfo}
                         purchasable={this.updatePurchaseState(this.props.ingredients)}
                         ordered={this.purchaseHandler}
@@ -73,9 +73,9 @@ class BurgerBuilder extends Component {
 
             orderSummary = (<OrderSummary
                 ingredients={this.props.ingredients}
+                price={this.props.totalPrice}
                 purchaseContinued={this.purchaseContinueHandler}
-                purchaseCancelled={this.purchaseCancelHandler}
-                price={this.props.totalPrice} />)
+                purchaseCancelled={this.purchaseCancelHandler} />)
         }
 
 
@@ -94,7 +94,7 @@ const mapStateToProps = state => {
     return {
         ingredients: state.burgerBuilder.ingredients,
         totalPrice: state.burgerBuilder.totalPrice,
-        error: state.error
+        error: state.burgerBuilder.error
     };
 }
 

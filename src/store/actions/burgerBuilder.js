@@ -1,18 +1,17 @@
 import * as actionTypes from './actionTypes';
-
 import axios from '../../axios-orders';
 
-export const addIngredient = (ingredientName) => {
+export const addIngredient = (ingredient) => {
     return {
         type: actionTypes.ADD_INGREDIENT,
-        ingredient: ingredientName
+        ingredient: ingredient
     }
 }
 
-export const removeIngredient = (ingredientName) => {
+export const removeIngredient = (ingredient) => {
     return {
         type: actionTypes.REMOVE_INGREDIENT,
-        ingredient: ingredientName
+        ingredient: ingredient
     }
 }
 
