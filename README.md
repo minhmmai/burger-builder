@@ -8,6 +8,7 @@ git clone https://github.com/minhmmai/burger-builder.git
 npm install
 ### 3. To start the project, run:
 npm start
+
 This should open a new tab in your browser. If not, open [http://localhost:3000/] localhost:3000
 
 Other commands
